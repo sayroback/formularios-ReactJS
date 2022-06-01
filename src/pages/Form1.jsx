@@ -11,7 +11,7 @@ function Form1() {
   return (
     <form onSubmit={submit}>
       <div>
-        <span>La la la</span>
+        <h1>Form 1</h1>
         <input type="text" name="campo" />
       </div>
       <input type="text" name="campo-2" />
