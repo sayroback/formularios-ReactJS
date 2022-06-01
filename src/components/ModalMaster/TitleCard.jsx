@@ -1,12 +1,13 @@
 import React from "react";
 import "./style/TitleCard.css";
+import CloseIcon from "@mui/icons-material/Close";
 
-const TitleCard = () => {
+const TitleCard = ({ openModalAdmin }) => {
   return (
     <div className="TitleCard">
       <h1>Crear administrador</h1>
-      <div>
-        <span>X</span>
+      <div onClick={openModalAdmin} className="iconCloseModalCreateAdmin">
+        <CloseIcon />
       </div>
     </div>
   );

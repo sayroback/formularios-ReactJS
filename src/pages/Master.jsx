@@ -11,7 +11,9 @@ const Master = () => {
   return (
     <div>
       <button onClick={openModalAdmin}>Modal</button>
-      <div>{!!modalAdmin && <ModalMaster />}</div>
+      <div>
+        {!!modalAdmin && <ModalMaster openModalAdmin={openModalAdmin} />}
+      </div>
     </div>
   );
 };

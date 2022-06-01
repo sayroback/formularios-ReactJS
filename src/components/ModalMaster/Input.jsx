@@ -4,8 +4,8 @@ import "./style/Input.css";
 const Input = ({ label, ...rest }) => {
   return (
     <div className="field">
-      <label>{label}</label>
-      <input {...rest} />
+      <h3 className="titleFormCreateAdmin">{label}</h3>
+      <input {...rest} required />
     </div>
   );
 };

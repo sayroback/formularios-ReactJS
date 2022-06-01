@@ -2,8 +2,10 @@ import React from "react";
 import Input from "./Input";
 import Button from "./Button";
 import useFormulario from "../../hooks/useFormulario";
+import Select from "./Select";
+import "./style/Button.css";
 
-const UserForm = ({ submit }) => {
+const UserForm = ({ submit, openModalAdmin }) => {
   const [formulario, handleChange, reset] = useFormulario({
     fullName: "",
     profile: "",
@@ -11,7 +13,6 @@ const UserForm = ({ submit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formulario.profile);
     if (formulario.profile) {
       submit(formulario);
       reset();
@@ -19,28 +20,31 @@ const UserForm = ({ submit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Input
-        label="Nombre completo"
-        type="text"
-        name="fullName"
-        placeholder="Nombre"
-        value={formulario.fullName}
-        onChange={handleChange}
-      />
-      <select
-        className="select"
-        name="profile"
-        value={formulario.profile}
-        onChange={handleChange}
-      >
-        <option value="">Tipo de administrador</option>
-        <option value="3"> Admin </option>
-        <option value="4"> Super Admin </option>
-      </select>
-      {!formulario.profile && <p>Elige un perfil</p>}
-      <Button>Enviar</Button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <Input
+          label="Nombre completo"
+          type="text"
+          name="fullName"
+          placeholder="Nombre"
+          value={formulario.fullName}
+          onChange={handleChange}
+        />
+        <Select
+          label="Tipo de administrador"
+          className="select"
+          name="profile"
+          value={formulario.profile}
+          onChange={handleChange}
+        />
+        <Button>Enviar</Button>
+      </form>
+      <div>
+        <button onClick={openModalAdmin} id="buttonCancel" className="button">
+          Cancelar
+        </button>
+      </div>
+    </>
   );
 };
 

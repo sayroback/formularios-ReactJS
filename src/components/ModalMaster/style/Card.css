@@ -1,5 +1,10 @@
 .card {
   background-color: #fff;
-  border: 2px solid rgba(12, 145, 233, 0.527);
+  border: 5px solid #1572a117;
   border-radius: 20px;
+  box-shadow: 5px 5px 5px #1572a13d;
+}
+
+.titleFormCreateAdmin {
+  font-size: 20px;
 }

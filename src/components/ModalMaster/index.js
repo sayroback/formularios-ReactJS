@@ -5,7 +5,7 @@ import Container from "./Container";
 import UserForm from "./UserForm";
 import TitleCard from "./TitleCard";
 
-const ModalMaster = () => {
+const ModalMaster = ({ openModalAdmin }) => {
   const [usuarios, setUsuarios] = useState([]);
   console.log(usuarios);
   const submit = (usuario) => {
@@ -22,9 +22,9 @@ const ModalMaster = () => {
     >
       <Container>
         <Card>
-          <TitleCard />
+          <TitleCard openModalAdmin={openModalAdmin} />
           <div style={{ padding: 20 }}>
-            <UserForm submit={submit} />
+            <UserForm submit={submit} openModalAdmin={openModalAdmin} />
           </div>
         </Card>
       </Container>

@@ -1,6 +1,25 @@
 .TitleCard {
   display: flex;
   justify-content: space-between;
-  border-bottom: 4px solid rgb(65, 125, 214);
+  align-items: center;
+  border-bottom: 2px solid #1572a1;
   margin: 20px;
+  color: #1572a1;
+}
+.iconCloseModalCreateAdmin:hover {
+  background-color: #d8ecf5;
+}
+.iconCloseModalCreateAdmin {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1572a1;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconCloseModalCreateAdmin svg {
+  font-size: 35px;
+  height: 40px;
+  font-weight: 200;
 }
