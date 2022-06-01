@@ -1,0 +1,6 @@
+.TitleCard {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid rgb(65, 125, 214);
+  margin: 20px;
+}

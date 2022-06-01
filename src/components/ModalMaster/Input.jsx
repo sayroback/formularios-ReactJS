@@ -1,10 +1,10 @@
 import React from "react";
-import "../style/Input.css";
+import "./style/Input.css";
 
 const Input = ({ label, ...rest }) => {
   return (
     <div className="field">
-      <label htmlFor="">{label}</label>
+      <label>{label}</label>
       <input {...rest} />
     </div>
   );
